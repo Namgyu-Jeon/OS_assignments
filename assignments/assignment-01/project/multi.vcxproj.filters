@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D3F3E651-882E-4909-A1D1-4BF98B13625E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\app">
+      <UniqueIdentifier>{9436EF31-F67A-4C10-9324-9E2B4B07B872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\input">
+      <UniqueIdentifier>{3EFE2ED5-3F53-4418-AF1D-CEAD5C5929A3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\output">
+      <UniqueIdentifier>{56E0A73B-608B-4C6A-8F6E-B1F2EF55FC17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\app">
+      <UniqueIdentifier>{466DFBA6-8563-4EFC-9429-BBE870575BC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\input">
+      <UniqueIdentifier>{4B4F48DB-7F16-405B-8E58-453C133550A0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\output">
+      <UniqueIdentifier>{CB6D00E8-8736-42CB-BD93-58E4B4DCD23A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="src\app\MultiplicationTableApp.cpp"><Filter>Source Files\app</Filter></ClCompile>
+    <ClCompile Include="src\input\PositiveIntegerParser.cpp"><Filter>Source Files\input</Filter></ClCompile>
+    <ClCompile Include="src\output\TableRenderer.cpp"><Filter>Source Files\output</Filter></ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\app\MultiplicationTableApp.h"><Filter>Header Files\app</Filter></ClInclude>
+    <ClInclude Include="src\input\PositiveIntegerParser.h"><Filter>Header Files\input</Filter></ClInclude>
+    <ClInclude Include="src\output\TableRenderer.h"><Filter>Header Files\output</Filter></ClInclude>
+  </ItemGroup>
+</Project>

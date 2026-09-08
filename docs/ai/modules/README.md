@@ -4,10 +4,6 @@ These modules are not automatically loaded. During project initialization, selec
 
 | Module | Activate when |
 |---|---|
-| [Desktop application](desktop-application.md) | native GUI, local settings, OS integration |
-| [Web service](web-service.md) | browser UI, API, hosted runtime |
-| [Data migration](data-migration.md) | persistent schema or user-owned data changes |
-| [External binaries](external-binaries.md) | runtime tools or redistributed native binaries |
-| [Packaging and release](packaging-release.md) | installers, bundles, containers, stores, Releases |
+| [Desktop application](desktop-application.md) | Windows 콘솔 프로그램, Visual Studio 설정, OS 통합 검토 |
 
 Activation means copying concrete invariants into the relevant project docs and creating path-scoped Claude/Codex instructions close to the implementation. Do not import every module “just in case.”

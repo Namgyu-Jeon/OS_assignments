@@ -1,29 +1,11 @@
 # Security and Privacy
 
-## Product boundary
+이 저장소는 공개 과제 보고서입니다. 작성자가 공개를 승인한 이름, 학번, 과제 소스와 실행 스크린샷만 포함합니다.
 
-Describe authorized use and explicitly exclude abuse, credential collection, access-control bypass, and unsupported privileged behavior.
+- 비밀번호, 토큰, 쿠키, 개인 키와 환경 파일을 저장하지 않습니다.
+- 실행 파일과 ZIP은 배포하지 않습니다.
+- 빌드 캐시와 IDE 개인 설정을 커밋하지 않습니다.
+- 스크린샷은 작성자가 제공하고 공개 사용을 승인한 원본만 사용합니다.
+- 공개 저장소이지만 다른 사람에게 과제 재제출이나 복제를 허용한다는 뜻은 아닙니다.
 
-## Development rules
-
-- Do not place secrets in prompts, source, screenshots, tests, logs, documentation, commits, issues, or pull requests.
-- Use placeholders in examples and environment variables or an approved secret store at runtime.
-- Redact tokens, URLs containing secrets, personal paths, identifiers, and user content before sharing diagnostics.
-- Treat external output and imported data as untrusted.
-- Use least privilege for CI, apps, tokens, file access, and network access.
-- Pin dependencies and verify official integrity or signatures where available.
-- Preserve user data on failed migration, uninstall, cancellation, and partial operation.
-
-## Required stop conditions
-
-Stop before implementation or publication when:
-
-- provenance, license, or redistribution rights cannot be established;
-- an action needs unapproved administrator or security changes;
-- a secret or private user artifact may be exposed;
-- safe rollback or exact destructive scope cannot be established;
-- a production dependency or external binary is unreviewed.
-
-## Reporting vulnerabilities
-
-Define a private contact method before public use. Do not ask reporters to include credentials, private data, or production database copies.
+민감한 정보가 발견되면 새 커밋으로 가리는 데 그치지 않고 공개 범위를 즉시 재검토해야 합니다.

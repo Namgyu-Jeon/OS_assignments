@@ -1,72 +1,33 @@
 # Product Requirements Document
 
-Status: Draft
+Status: Approved
 
-## Product definition
+## 프로젝트 정의
 
-- **Project name:** `[PROJECT_NAME]`
-- **One-sentence purpose:** `[PRODUCT_PURPOSE]`
-- **Primary users:** `[TARGET_USERS]`
-- **Problem:** `[USER_PROBLEM]`
-- **Why now:** `[RATIONALE]`
+`OS_assignments`는 운영체제 과목의 여러 프로그래밍 과제를 하나의 공개 저장소에서 과제별로 탐색할 수 있게 정리하는 문서 저장소입니다. 담당 교수와 조교가 제출 링크를 열었을 때 별도 설명 없이 과제 개요, 설계, 테스트 증거, 빌드 방법을 확인할 수 있어야 합니다.
 
-## Safety and scope
+## 성공 조건
 
-### Supported use
+1. 최상위 README에서 과제 1 보고서로 한 번에 이동할 수 있습니다.
+2. 과제 1 첫 화면에 표지 정보와 목차, 대표 실행 결과가 표시됩니다.
+3. 시스템 문서에 실제 코드와 일치하는 데이터 흐름도, 순서도, 함수 목록과 알고리즘이 있습니다.
+4. 테스트 문서에 실제 실행 결과와 3·5·8·15단 스크린샷이 있습니다.
+5. 사용자 문서의 절차로 Release/x64 `multi.exe`를 빌드하고 실행할 수 있습니다.
+6. 모든 상대 링크와 이미지가 공개 GitHub 화면에서 정상 표시됩니다.
 
-- `[AUTHORIZED_USE_CASE]`
+## 범위와 제외 사항
 
-### Explicitly excluded
+- 포함: Markdown 보고서, Mermaid 다이어그램, 실제 콘솔 스크린샷, C++ 소스와 Visual Studio 프로젝트 설정
+- 제외: 실행 파일, 제출 ZIP, Debug·Release 빌드 산출물, 캐시, 임시 파일
+- 개인정보: 작성자가 공개를 승인한 이름과 학번만 텍스트로 기록합니다.
+- 외부 의존성: 과제 프로그램에는 C++ 표준 라이브러리와 Windows 기본 API 외의 라이브러리를 추가하지 않습니다.
 
-- `[NON_GOAL_OR_UNSAFE_USE]`
+## 품질 기준
 
-### Data and privacy
-
-- Data collected:
-- Local or remote storage:
-- Retention and deletion:
-- Secrets and authentication:
-
-## Success flow
-
-Describe the first end-to-end outcome a real user must complete without mocks:
-
-1. `[ENTRY]`
-2. `[ACTION]`
-3. `[RESULT]`
-4. `[RECOVERY_OR_ERROR]`
-
-## Functional requirements
-
-| ID | Requirement | Priority | Acceptance evidence |
-|---|---|---|---|
-| FR-001 | `[REQUIREMENT]` | Must | `[TEST_OR_MANUAL_EVIDENCE]` |
-
-## Quality requirements
-
-| Area | Requirement |
+| 영역 | 기준 |
 |---|---|
-| Reliability | `[FAILURE_AND_RECOVERY_EXPECTATION]` |
-| Performance | `[MEASURABLE_BOUNDARY]` |
-| Accessibility | `[KEYBOARD_SCREEN_READER_SCALING]` |
-| Security | `[INPUT_PROCESS_DATA_BOUNDARY]` |
-| Privacy | `[MINIMIZATION_AND_RETENTION]` |
-| Compatibility | `[SUPPORTED_PLATFORMS]` |
-
-## Milestones
-
-| Milestone | Goal | Acceptance gate | Exclusions |
-|---|---|---|---|
-| M0 | Product definition and architecture | Decisions approved and reproducible setup documented | Feature implementation |
-| M1 | Smallest real end-to-end flow | Real user flow works and is verified | Secondary features |
-| M2 | Product quality and persistence | Recovery, settings, UX, and regression gates pass | Broad expansion |
-| M3+ | Bounded feature expansions | Each sub-milestone has independent evidence | Silent scope growth |
-| Release | Packaging and clean-environment validation | Artifact, license, integrity, and manual gates pass | Unsupported claims |
-
-## Release blockers
-
-- Crash, frozen critical UI, corrupt or invalid output
-- Silent overwrite, deletion, fallback, or data migration failure
-- Required test, security, privacy, or license check failure
-- Missing human acceptance for material UI or real-world behavior
-- Claims for platforms or environments that were not tested
+| 정확성 | 문서의 구조·수치·테스트 결과가 최종 소스 및 실제 실행과 일치해야 합니다. |
+| 가독성 | 처음 방문한 사람이 최상위 README에서 두 번 이내의 클릭으로 모든 과제 문서에 도달해야 합니다. |
+| 증거 | 스크린샷과 수치는 실제 실행 또는 측정 결과만 사용합니다. |
+| 호환성 | Assignment 01 프로젝트는 Visual Studio Community 2026의 Release/x64로 빌드되어야 합니다. |
+| 공개 안전 | 자격 증명, 토큰, 실행 파일, 불필요한 개인 경로를 커밋하지 않습니다. |

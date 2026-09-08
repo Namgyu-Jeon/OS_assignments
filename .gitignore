@@ -16,7 +16,7 @@ CLAUDE.local.md
 *.sqlite
 *.sqlite3
 downloads/
-output/
+/output/
 artifacts/
 build/
 dist/
@@ -39,3 +39,16 @@ coverage/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Visual Studio and C++ build output
+.vs/
+build/
+Debug/
+Release/
+x64/
+*.vcxproj.user
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.zip
