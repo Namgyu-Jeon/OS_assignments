@@ -1,0 +1,41 @@
+# Local AI preferences and tool state
+CLAUDE.local.md
+.codex/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.local
+*.log
+
+# User data and generated output
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+downloads/
+output/
+artifacts/
+build/
+dist/
+tmp/
+temp/
+
+# Language and tool caches
+.venv/
+venv/
+node_modules/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage/
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
