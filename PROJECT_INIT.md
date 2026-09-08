@@ -1,52 +1,17 @@
 # Project initialization
 
-Status: `Not initialized`
+Initialized: 2026-09-08
 
-This file turns the generic repository into a specific project. The AI must begin with read-only discovery and must not invent product decisions.
+## Project definition
 
-## Initialization interview
+- **Name:** OS_assignments
+- **Purpose:** 운영체제 과목의 프로그래밍 과제, 실제 실행 증거, 빌드 안내를 과제별로 공개합니다.
+- **Primary readers:** 담당 교수, 조교, 작성자
+- **Success flow:** 저장소 첫 화면 → 과제 선택 → 설계·테스트·사용자 문서 확인 → 필요하면 소스 빌드
+- **Platform:** Windows, Visual Studio Community 2026, C++17
+- **Repository policy:** 공개 저장소 하나에서 `assignments/assignment-NN` 폴더로 과제를 분리합니다.
+- **Data boundary:** 과제 문서와 작성자가 공개를 승인한 이름·학번·스크린샷만 저장합니다.
+- **Excluded:** 실행 파일, ZIP, 빌드 캐시, 비밀 정보, 실행하지 않은 테스트 결과
+- **Manual acceptance owner:** 전남규
 
-Collect and confirm:
-
-1. Project name and one-sentence purpose
-2. Target users and their primary problem
-3. One end-to-end success flow for the first milestone
-4. Explicit non-goals and legal/security boundaries
-5. Supported platforms and environments
-6. Technology constraints and approved dependencies
-7. Data storage, privacy, backup, migration, and deletion expectations
-8. UI, accessibility, performance, and localization expectations
-9. Test levels, deterministic quality commands, and manual checks
-10. Packaging, deployment, release, and repository visibility policy
-11. Git workflow and which external actions require separate approval
-12. Highest-risk assumptions that need research or a prototype
-
-## Required proposal before writing
-
-Present:
-
-- the interpreted product scope;
-- open decisions and recommended defaults;
-- milestone map with acceptance gates;
-- proposed architecture and repository layout;
-- files to create or update;
-- verification plan;
-- rollback baseline;
-- approval request following `docs/ai/APPROVAL_MODEL.md`.
-
-## After approval
-
-Populate at minimum:
-
-- `README.md`
-- `docs/PRD.md`
-- `docs/DEVELOPMENT_GUIDE.md`
-- `docs/ARCHITECTURE.md`
-- `docs/TESTING.md`
-- `docs/SECURITY.md`
-- `docs/DECISIONS.md`
-- `docs/CHANGELOG.md`
-- `docs/ai/CURRENT_STATE.md`
-- project-specific test and validation commands in `docs/ai/QUALITY_GATES.md`
-
-Replace this status with `Initialized: YYYY-MM-DD` only after the user approves the resulting project definition. Remove unused optional modules rather than leaving misleading rules active.
+상세한 범위와 검증 기준은 [PRD](docs/PRD.md)와 [Testing Strategy](docs/TESTING.md)에 기록합니다.

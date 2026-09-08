@@ -1,51 +1,33 @@
 # Quality Gates
 
-Replace placeholders during project initialization. Commands must be non-interactive and deterministic by default.
+## 문서 구조 검사
 
-## Focused verification
-
-```text
-[FOCUSED_LINT_COMMAND]
-[FOCUSED_TEST_COMMAND]
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\validate_repository.ps1
 ```
 
-Run focused checks while implementing. Include the directly changed behavior and the nearest regression boundary.
+## Assignment 01 Release/x64 빌드
 
-## Full verification
+Visual Studio Developer Command Prompt에서 실행합니다.
 
-Run once after the approved implementation scope is complete:
+```bat
+msbuild assignments\assignment-01\project\multi.sln /t:Rebuild /m "/p:Configuration=Release;Platform=x64"
+```
 
-```text
-[FULL_LINT_COMMAND]
-[FULL_TEST_COMMAND]
-[DEPENDENCY_HEALTH_COMMAND]
+## Git 게시 전 검사
+
+```powershell
 git diff --check
-```
-
-Also verify:
-
-- UTF-8 and repository line-ending policy
-- internal documentation links
-- secrets, tokens, personal paths, and private identifiers
-- ignored caches, settings, databases, media, partial files, build output, and local tools
-- dependency locks and notices when dependencies changed
-- platform-specific regression coverage when shared code changed
-
-## Staged and publication gate
-
-Before an approved commit or push:
-
-```text
 git status --short
 git diff --cached --name-status
 git diff --cached --check
 ```
 
-Review the entire staged diff. Confirm only approved files are staged and the base branch did not change.
+추가 확인 항목:
 
-## Evidence language
-
-- Report exact commands, pass/fail, and test counts.
-- Distinguish “not run,” “automated,” “manually verified,” and “clean environment verified.”
-- A previous result is reusable only when no relevant code, configuration, lock, or environment changed afterward.
-- Do not convert absence of evidence into a compatibility or security claim.
+- README와 상세 문서의 상대 링크가 모두 존재하는가
+- Mermaid 블록이 `flowchart` 또는 지원되는 다이어그램 선언으로 시작하는가
+- 실제 이미지 4개가 존재하고 빈 파일이 아닌가
+- `.exe`, `.zip`, `build`, `.vs`, `*.vcxproj.user`가 추적되지 않는가
+- 정상·오류·경계 입력 결과가 테스트 문서와 일치하는가
+- 공개 페이지에서 표, 이미지, Mermaid가 정상 렌더링되는가

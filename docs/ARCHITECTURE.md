@@ -1,48 +1,19 @@
-# Architecture
+# Repository Architecture
 
-Status: Draft
-
-## Context
-
-`[DESCRIBE_USERS_EXTERNAL_SYSTEMS_AND_TRUST_BOUNDARIES]`
-
-## Components
-
-| Component | Responsibility | Must not do |
-|---|---|---|
-| `[COMPONENT]` | `[RESPONSIBILITY]` | `[BOUNDARY]` |
-
-## Data flow
+## 정보 구조
 
 ```mermaid
-flowchart LR
-    U["User"] --> I["Interface"]
-    I --> A["Application service"]
-    A --> D["Domain rules"]
-    A --> X["External adapters"]
-    A --> P["Persistence"]
+flowchart TD
+    ROOT[저장소 첫 화면] --> INDEX[과제 목록]
+    INDEX --> A1[Assignment 01 첫 화면]
+    A1 --> REQ[요구사항]
+    A1 --> SYS[시스템 설명]
+    A1 --> TEST[테스트와 실제 화면]
+    A1 --> USER[빌드·실행 안내]
+    A1 --> SELF[자기 평가]
+    A1 --> SOURCE[Visual Studio 소스]
 ```
 
-Replace this illustrative diagram with the real project flow.
+최상위 README는 과목 전체의 인덱스만 담당합니다. 과제의 상세 내용은 과제 폴더 안에서 완결되며, 이후 과제도 같은 구조를 반복해 링크가 서로 섞이지 않게 합니다.
 
-## Trust boundaries
-
-- Untrusted inputs:
-- Privileged operations:
-- User-owned data:
-- External services and binaries:
-- Redaction and logging boundary:
-
-## Platform boundaries
-
-| Concern | Shared policy | Platform-specific adapter |
-|---|---|---|
-| Process lifecycle | `[POLICY]` | `[IMPLEMENTATION]` |
-| Paths and filenames | `[POLICY]` | `[IMPLEMENTATION]` |
-| Packaging | `[POLICY]` | `[IMPLEMENTATION]` |
-
-## Recovery invariants
-
-- `[DATA_OR_STATE_THAT_MUST_SURVIVE_FAILURE]`
-- `[ATOMICITY_OR_NO_OVERWRITE_RULE]`
-- `[CANCELLATION_AND_LATE_RESPONSE_RULE]`
+Assignment 01 프로그램 자체의 데이터 흐름과 알고리즘은 [시스템 설명](../assignments/assignment-01/docs/SYSTEM_DESCRIPTION.md)에 기록합니다.

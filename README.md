@@ -1,85 +1,30 @@
-# AI-Assisted Project Workflow Template
+# OS Assignments
 
-A reusable, tool-neutral operating system for developing software with **Claude Code or Codex**. It emphasizes deliberate planning, explicit approval boundaries, small milestones, evidence-based verification, safe Git operations, and durable handoff documentation.
+운영체제 과목에서 수행한 프로그래밍 과제와 기술 문서를 한곳에 정리한 저장소입니다. 과제별 폴더의 첫 화면에서 요구사항, 설계, 테스트 증거, 빌드 및 실행 방법을 순서대로 확인할 수 있습니다.
 
-This repository is a project template, not a production framework or a substitute for human review.
+| 구분 | 내용 |
+|---|---|
+| 과목 | DCCS301 Operating System |
+| 작성자 | 전남규 |
+| 학번 | 2020271319 |
+| 개발 환경 | Windows · Visual Studio Community 2026 · C++17 |
 
-## Start a new project
+## 과제 목록
 
-1. Select **Use this template** on GitHub and create a new repository.
-2. Clone the new repository and open its root directory in Claude Code or Codex.
-3. Send this first request:
+| 과제 | 주제 | 상태 | 문서 |
+|---|---|---|---|
+| Assignment 01 | Multiplication Table | 완료 | **[과제 1 보고서 바로 보기](assignments/assignment-01/)** |
 
-   > `PROJECT_INIT.md`를 읽고 프로젝트 초기화를 시작해줘. 아직 파일을 변경하지 말고 현재 상태를 읽기 전용으로 확인한 뒤 필요한 질문과 계획을 제시해줘.
-
-4. Answer the initialization questions and review the proposed milestones.
-5. Approve only the first clearly bounded stage.
-
-Detailed Korean instructions and copy-ready prompts are available in the companion guide: **[AI-Assisted Project Workflow Guide](https://Namgyu-Jeon.github.io/ai-assisted-project-workflow-guide/)**.
-
-## How both agents use the repository
-
-| Agent | Automatic project entry | Scoped instructions |
-|---|---|---|
-| Codex | `AGENTS.md` | nearest nested `AGENTS.md` or `AGENTS.override.md` |
-| Claude Code | `CLAUDE.md`, which imports `AGENTS.md` | nested `CLAUDE.md` and path-scoped `.claude/rules/*.md` |
-
-`AGENTS.md` contains the shared non-negotiable rules. `CLAUDE.md` remains a thin adapter so the two files do not drift.
-
-## Repository map
+## 저장소 구성
 
 ```text
-.
-├── AGENTS.md                    # Shared project operating rules
-├── CLAUDE.md                    # Claude Code adapter
-├── PROJECT_INIT.md              # First-session interview and setup gate
-├── .claude/rules/               # Claude path-scoped rules
-├── docs/
-│   ├── PRD.md                   # Product scope and acceptance gates
-│   ├── DEVELOPMENT_GUIDE.md     # Architecture and delivery policy
-│   ├── ARCHITECTURE.md          # Current system design
-│   ├── TESTING.md               # Test strategy and evidence
-│   ├── SECURITY.md              # Threat boundaries and data policy
-│   ├── DECISIONS.md             # Decision log
-│   ├── CHANGELOG.md             # Milestone history
-│   └── ai/
-│       ├── CURRENT_STATE.md      # Compact resumable state
-│       ├── QUALITY_GATES.md      # Exact verification commands
-│       ├── playbooks/            # Task-specific operating procedures
-│       ├── prompts/              # Copy-ready user instructions
-│       └── modules/              # Optional project-type rules
-└── scripts/validate_template.py # Standard-library repository validator
+OS_assignments/
+├─ README.md
+└─ assignments/
+   └─ assignment-01/
+      ├─ README.md                 # 표지·목차·요약
+      ├─ docs/                     # 설계·테스트·사용자 안내·자기 평가
+      └─ project/                  # Visual Studio C++ 소스 프로젝트
 ```
 
-## Core principles
-
-- Context is layered: keep root instructions short and load detail by task or path.
-- Permission is staged: implementation does not imply commit, push, merge, release, or publication.
-- Evidence beats confidence: tests, diffs, logs, hashes, and human checks support completion claims.
-- User data and existing changes are preserved by default.
-- Automated tests remain deterministic; live external services are separate manual or opt-in checks.
-- Documentation records decisions and current truth, not raw private conversations.
-
-## Validate the template
-
-The validator uses only the Python standard library:
-
-```bash
-python scripts/validate_template.py
-git diff --check
-```
-
-## Customize without creating instruction bloat
-
-1. Put universal, high-risk rules in root `AGENTS.md`.
-2. Put stable project facts in `docs/`.
-3. Put task procedures in `docs/ai/playbooks/`.
-4. Put Claude path-specific rules in `.claude/rules/`.
-5. Put Codex path-specific rules in an `AGENTS.md` close to the relevant code.
-6. Do not import every detailed document from `CLAUDE.md`; imports load at session start.
-
-See [Instruction architecture](docs/ai/INSTRUCTION_ARCHITECTURE.md) for concrete examples.
-
-## License
-
-MIT. See [LICENSE](LICENSE).
+실행 파일과 빌드 산출물은 저장소에 포함하지 않습니다. 각 과제의 실제 동작은 검증 결과와 원본 콘솔 스크린샷으로 기록합니다.
