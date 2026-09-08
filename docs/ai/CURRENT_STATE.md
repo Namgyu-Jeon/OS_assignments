@@ -6,10 +6,9 @@ Last verified: 2026-09-08
 
 - Project: `OS_assignments`
 - Default branch: `main`
-- Current branch: `docs/assignment-01-report`
-- Approved baseline commit: `e206268`
-- Working tree: Assignment 01 report verified locally; publication pending
-- Lifecycle stage: `FULL_VERIFIED`
+- Published branch: `main`
+- Working tree: Assignment 01 report merged and verified from a fresh public clone
+- Lifecycle stage: `POST_MERGE_VERIFIED`
 
 ## Active milestone
 
@@ -26,8 +25,9 @@ Last verified: 2026-09-08
 | Focused tests | Markdown 53개, 필수 파일 19개, 링크·이미지·Mermaid 선언 통과 | 2026-09-08 |
 | Full tests | Release/x64 빌드, 정상 9종, 오류·재입력 6종 통과 | 2026-09-08 |
 | Source and images | 원본 소스 10개, 원본 이미지 4개 SHA-256 일치 | 2026-09-08 |
-| Public rendering | Pending publication | 2026-09-08 |
+| Public rendering | 과제 README, 표, 이미지 4개, Mermaid 다이어그램 표시 통과 | 2026-09-08 |
+| Fresh public clone | 문서 검사, Release/x64 빌드, `multi.exe` 실행 통과 | 2026-09-08 |
 
 ## Next authorized action
 
-Review the staged diff, publish through a pull request, and inspect the public GitHub result.
+작성자가 공개 과제 링크를 최종 확인한 뒤 제출합니다.
