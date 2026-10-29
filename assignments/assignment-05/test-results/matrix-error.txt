@@ -1,0 +1,3 @@
+Command: mm.exe A.txt B.txt
+Error: Adjacent matrix dimensions do not match.
+Exit code: 1

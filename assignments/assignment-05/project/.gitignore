@@ -1,0 +1,7 @@
+.vs/
+bin/
+obj/
+tmp/
+*.vcxproj.user
+result.txt
+__pycache__/
