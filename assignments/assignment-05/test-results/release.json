@@ -1,0 +1,233 @@
+{
+  "passed": 40,
+  "stress": true,
+  "configuration": "Release",
+  "cases": [
+    {
+      "name": "no-arguments",
+      "status": "PASS"
+    },
+    {
+      "name": "one-argument",
+      "status": "PASS"
+    },
+    {
+      "name": "eleven-operands",
+      "status": "PASS"
+    },
+    {
+      "name": "missing-file",
+      "status": "PASS"
+    },
+    {
+      "name": "empty-file",
+      "status": "PASS"
+    },
+    {
+      "name": "ragged-rows",
+      "status": "PASS"
+    },
+    {
+      "name": "out-of-range",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid-token",
+      "status": "PASS"
+    },
+    {
+      "name": "huge-token",
+      "status": "PASS"
+    },
+    {
+      "name": "too-many-rows",
+      "status": "PASS"
+    },
+    {
+      "name": "too-many-columns",
+      "status": "PASS"
+    },
+    {
+      "name": "incompatible",
+      "status": "PASS"
+    },
+    {
+      "name": "late-incompatible",
+      "status": "PASS"
+    },
+    {
+      "name": "protect-input",
+      "status": "PASS"
+    },
+    {
+      "name": "hardlink-input",
+      "status": "PASS"
+    },
+    {
+      "name": "output-failure",
+      "status": "PASS"
+    },
+    {
+      "name": "readonly-result",
+      "status": "PASS"
+    },
+    {
+      "name": "locked-result",
+      "status": "PASS"
+    },
+    {
+      "name": "lecture-example",
+      "status": "PASS",
+      "seconds": 1.007,
+      "rows": 2,
+      "columns": 2
+    },
+    {
+      "name": "rectangular-example",
+      "status": "PASS",
+      "seconds": 1.044,
+      "rows": 2,
+      "columns": 1
+    },
+    {
+      "name": "zero-and-negative",
+      "status": "PASS",
+      "seconds": 1.027,
+      "rows": 2,
+      "columns": 2
+    },
+    {
+      "name": "cancellation",
+      "status": "PASS",
+      "seconds": 1.033,
+      "rows": 1,
+      "columns": 1
+    },
+    {
+      "name": "ten-operands",
+      "status": "PASS",
+      "seconds": 9.114,
+      "rows": 1,
+      "columns": 1
+    },
+    {
+      "name": "single-row-column",
+      "status": "PASS",
+      "seconds": 1.023,
+      "rows": 1,
+      "columns": 1
+    },
+    {
+      "name": "unicode-paths",
+      "status": "PASS",
+      "seconds": 1.012,
+      "rows": 1,
+      "columns": 1
+    },
+    {
+      "name": "whitespace-bom",
+      "status": "PASS",
+      "seconds": 1.01,
+      "rows": 2,
+      "columns": 1
+    },
+    {
+      "name": "random-01",
+      "status": "PASS",
+      "seconds": 3.067,
+      "rows": 4,
+      "columns": 4
+    },
+    {
+      "name": "random-02",
+      "status": "PASS",
+      "seconds": 2.037,
+      "rows": 5,
+      "columns": 4
+    },
+    {
+      "name": "random-03",
+      "status": "PASS",
+      "seconds": 1.014,
+      "rows": 3,
+      "columns": 4
+    },
+    {
+      "name": "random-04",
+      "status": "PASS",
+      "seconds": 1.025,
+      "rows": 1,
+      "columns": 5
+    },
+    {
+      "name": "random-05",
+      "status": "PASS",
+      "seconds": 3.027,
+      "rows": 1,
+      "columns": 6
+    },
+    {
+      "name": "random-06",
+      "status": "PASS",
+      "seconds": 2.035,
+      "rows": 2,
+      "columns": 4
+    },
+    {
+      "name": "random-07",
+      "status": "PASS",
+      "seconds": 1.025,
+      "rows": 6,
+      "columns": 6
+    },
+    {
+      "name": "random-08",
+      "status": "PASS",
+      "seconds": 2.04,
+      "rows": 4,
+      "columns": 5
+    },
+    {
+      "name": "provided-matrix_1",
+      "status": "PASS",
+      "seconds": 4.473,
+      "rows": 20,
+      "columns": 100
+    },
+    {
+      "name": "provided-matrix_2",
+      "status": "PASS",
+      "seconds": 2.05,
+      "rows": 4,
+      "columns": 6
+    },
+    {
+      "name": "provided-matrix_3",
+      "status": "PASS",
+      "seconds": 4.1,
+      "rows": 100,
+      "columns": 100
+    },
+    {
+      "name": "maximum-ten-positive",
+      "status": "PASS",
+      "seconds": 13.603,
+      "rows": 100,
+      "columns": 100
+    },
+    {
+      "name": "maximum-ten-negative",
+      "status": "PASS",
+      "seconds": 13.474,
+      "rows": 100,
+      "columns": 100
+    },
+    {
+      "name": "large-sign-and-cancellation",
+      "status": "PASS",
+      "seconds": 13.678,
+      "rows": 100,
+      "columns": 100
+    }
+  ]
+}

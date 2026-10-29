@@ -1,0 +1,14 @@
+{
+  "configuration": "Release",
+  "thread_checks_passed": 6,
+  "arithmetic_comparisons_passed": 8480,
+  "status": "PASS",
+  "thread_results": [
+    "PASS six cells: six distinct threads, six Sleep(1000), correct values",
+    "PASS partial creation failure: all three workers joined and closed",
+    "PASS first creation failure: no worker or handle left behind",
+    "PASS wait failure: remaining workers joined and closed",
+    "PASS close failure: remaining workers joined and closed",
+    "PASS 100x100: 10000 threads, 10000 Sleep(1000), all handles closed"
+  ]
+}

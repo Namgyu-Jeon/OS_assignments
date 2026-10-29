@@ -1,0 +1,10 @@
+Command: mm.exe A.txt B.txt
+
+(2x3) x (3x2) = (2x2)
+
+    4    2
+    2    2
+
+Processing Time: 1.020 sec
+
+Exit code: 0
