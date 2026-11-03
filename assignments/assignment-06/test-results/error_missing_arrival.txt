@@ -1,0 +1,3 @@
+
+Error: A process is missing its arrival time.
+

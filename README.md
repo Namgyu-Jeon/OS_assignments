@@ -15,5 +15,6 @@
 | Assignment 03 | CPU Load Monitor | **[과제 3 보고서 열기](assignments/assignment-03/README.md)** |
 | Assignment 04 | Process Tree | **[과제 4 보고서 열기](assignments/assignment-04/README.md)** |
 | Assignment 05 | Matrix Multiplication with Thread | **[과제 5 보고서 열기](assignments/assignment-05/README.md)** |
+| Assignment 06 | Process Scheduling — Preemptive SJF | **[과제 6 보고서 열기](assignments/assignment-06/README.md)** |
 
 각 보고서에는 시스템 설명, 알고리즘, 테스트 결과, 실제 실행 화면, 컴파일·실행 방법과 자기 평가가 포함되어 있습니다.

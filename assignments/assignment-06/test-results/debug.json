@@ -1,0 +1,34 @@
+{
+  "verification_date": "2026-11-03",
+  "environment": {
+    "os": "Windows x64",
+    "ide": "Visual Studio Community 2026",
+    "toolset": "MSVC v145",
+    "cpp_standard": "C++17"
+  },
+  "configuration": "Debug/x64",
+  "build": {
+    "exit_code": 0,
+    "warnings_as_errors": true
+  },
+  "verification": {
+    "command": "python tests/verify.py --exe bin/x64/Debug/sjf.exe",
+    "exit_code": 0,
+    "checks_passed": 145,
+    "provided_examples": 4,
+    "targeted_cases": 10,
+    "seeded_random_cases": 120,
+    "failure_cases": 11,
+    "stdout": "PASS: all 4 provided examples, individual waits, averages, and exact output spacing\nPASS: 10 targeted scheduling and input cases\nPASS: 120 seeded random inputs against independent per-time-unit simulation\nPASS: 11 failure cases return a failing exit code without partial results\nPASS: 145 checks (sjf.exe)\n"
+  },
+  "source_sha256": {
+    "main.cpp": "45396b8feced9a6606cc8e3388825c5a51dba6fa6ea1dd40dcbf94f38508883b",
+    "ProcessFile.cpp": "038299e6c38b1c909954daab1ade2e7ea25b719b4059c37eee4d44acccef0685",
+    "ProcessFile.h": "7b3e330fc2f8cfc4f10f5e88cd8c553663bbcf735f07966a0850eeffa02ff0aa",
+    "ProcessInfo.h": "fdb53f2eb15d6c0456a429ccdcc367c399a13a1fdd33b827b6446c61bb3cd590",
+    "SchedulePrinter.cpp": "bb21c1a1d70a77f60a8c24d31b661a60dd1f7b1656c8db12d84234ba5c4ad9c9",
+    "SchedulePrinter.h": "08592f4a8773b78969745769fb041e604a4e6cf029639b4851e1aa57b3bd2667",
+    "SjfScheduler.cpp": "71d22e6a4e14f4862c22abb41f77fda7e9e5cb052c2fe032da170d5c05a33b21",
+    "SjfScheduler.h": "0d81e00310d997c83aa74549b168923374faca29109fd610693fa84f1ba3d049"
+  }
+}

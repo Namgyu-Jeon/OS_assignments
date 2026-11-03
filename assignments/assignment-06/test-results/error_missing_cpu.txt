@@ -1,0 +1,3 @@
+
+Error: A burst sequence must start and end with CPU.
+

@@ -1,0 +1,372 @@
+{
+  "verification_date": "2026-11-03",
+  "new_input_files": 12,
+  "total_error_input_files": 13,
+  "checks_passed": 39,
+  "cases": [
+    {
+      "input": "error.txt",
+      "description": "마지막 CPU 구간 누락",
+      "input_preview": "P00\tARRIVAL:0\tCPU:6\tI/O:2\tCPU:3\nP01\tARRIVAL:2\tCPU:4\tI/O:1",
+      "input_is_empty": false,
+      "expected_error": "Error: A burst sequence must start and end with CPU.",
+      "manual_capture": "images/sjf-format-error.png",
+      "checks": [
+        {
+          "configuration": "working-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-debug",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        }
+      ]
+    },
+    {
+      "input": "error_cpu_order.txt",
+      "description": "CPU가 연속으로 나오는 순서 오류",
+      "input_preview": "P00 ARRIVAL:0 CPU:4 CPU:2",
+      "input_is_empty": false,
+      "expected_error": "Error: Unexpected input field; expected I/O:",
+      "manual_capture": null,
+      "checks": [
+        {
+          "configuration": "working-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-debug",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        }
+      ]
+    },
+    {
+      "input": "error_first_io.txt",
+      "description": "첫 구간이 I/O인 오류",
+      "input_preview": "P00 ARRIVAL:0 I/O:2 CPU:4",
+      "input_is_empty": false,
+      "expected_error": "Error: Unexpected input field; expected CPU:",
+      "manual_capture": null,
+      "checks": [
+        {
+          "configuration": "working-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-debug",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        }
+      ]
+    },
+    {
+      "input": "error_negative_time.txt",
+      "description": "음수 시간",
+      "input_preview": "P00 ARRIVAL:0 CPU:-3",
+      "input_is_empty": false,
+      "expected_error": "Error: Time values must be nonnegative 64-bit integers.",
+      "manual_capture": "images/sjf-negative-time.png",
+      "checks": [
+        {
+          "configuration": "working-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-debug",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        }
+      ]
+    },
+    {
+      "input": "error_text_time.txt",
+      "description": "숫자 대신 문자",
+      "input_preview": "P00 ARRIVAL:0 CPU:abc",
+      "input_is_empty": false,
+      "expected_error": "Error: Time values must be nonnegative 64-bit integers.",
+      "manual_capture": null,
+      "checks": [
+        {
+          "configuration": "working-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-debug",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        }
+      ]
+    },
+    {
+      "input": "error_decimal_time.txt",
+      "description": "정수 대신 소수",
+      "input_preview": "P00 ARRIVAL:0 CPU:1.5",
+      "input_is_empty": false,
+      "expected_error": "Error: Time values must be nonnegative 64-bit integers.",
+      "manual_capture": null,
+      "checks": [
+        {
+          "configuration": "working-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-debug",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        }
+      ]
+    },
+    {
+      "input": "error_missing_arrival.txt",
+      "description": "도착 시각 항목 누락",
+      "input_preview": "P00",
+      "input_is_empty": false,
+      "expected_error": "Error: A process is missing its arrival time.",
+      "manual_capture": "images/sjf-missing-arrival.png",
+      "checks": [
+        {
+          "configuration": "working-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-debug",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        }
+      ]
+    },
+    {
+      "input": "error_missing_cpu.txt",
+      "description": "CPU 구간 누락",
+      "input_preview": "P00 ARRIVAL:0",
+      "input_is_empty": false,
+      "expected_error": "Error: A burst sequence must start and end with CPU.",
+      "manual_capture": null,
+      "checks": [
+        {
+          "configuration": "working-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-debug",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        }
+      ]
+    },
+    {
+      "input": "error_wrong_label.txt",
+      "description": "CPU 항목 이름의 대소문자 오류",
+      "input_preview": "P00 ARRIVAL:0 cpu:4",
+      "input_is_empty": false,
+      "expected_error": "Error: Unexpected input field; expected CPU:",
+      "manual_capture": null,
+      "checks": [
+        {
+          "configuration": "working-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-debug",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        }
+      ]
+    },
+    {
+      "input": "error_colon_space.txt",
+      "description": "콜론과 숫자 사이에 공백",
+      "input_preview": "P00 ARRIVAL:0 CPU: 4",
+      "input_is_empty": false,
+      "expected_error": "Error: Time values must be nonnegative 64-bit integers.",
+      "manual_capture": null,
+      "checks": [
+        {
+          "configuration": "working-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-debug",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        }
+      ]
+    },
+    {
+      "input": "error_empty.txt",
+      "description": "내용이 없는 빈 파일",
+      "input_preview": "",
+      "input_is_empty": true,
+      "expected_error": "Error: The input file contains no processes.",
+      "manual_capture": null,
+      "checks": [
+        {
+          "configuration": "working-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-debug",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        }
+      ]
+    },
+    {
+      "input": "error_integer_overflow.txt",
+      "description": "입력 정수가 64비트 범위 초과",
+      "input_preview": "P00 ARRIVAL:0 CPU:9223372036854775808",
+      "input_is_empty": false,
+      "expected_error": "Error: Time values must be nonnegative 64-bit integers.",
+      "manual_capture": null,
+      "checks": [
+        {
+          "configuration": "working-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-debug",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        }
+      ]
+    },
+    {
+      "input": "error_time_overflow.txt",
+      "description": "도착과 실행 시간의 합이 범위 초과",
+      "input_preview": "P00 ARRIVAL:9223372036854775807 CPU:1",
+      "input_is_empty": false,
+      "expected_error": "Error: The simulation time exceeds the 64-bit range.",
+      "manual_capture": null,
+      "checks": [
+        {
+          "configuration": "working-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-release",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        },
+        {
+          "configuration": "repository-debug",
+          "exit_code": 1,
+          "normal_output_empty": true,
+          "matches_expected": true
+        }
+      ]
+    }
+  ]
+}
