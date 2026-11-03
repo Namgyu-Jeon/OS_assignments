@@ -1,0 +1,112 @@
+{
+  "verification_date": "2026-11-03",
+  "configuration": "Release/x64",
+  "normal_inputs": [
+    {
+      "input": "input1.txt",
+      "process_count": 5,
+      "exit_code": 0,
+      "waiting_times": {
+        "P00": 6,
+        "P01": 21,
+        "P02": 7,
+        "P03": 0,
+        "P04": 2
+      },
+      "average": "7.20",
+      "matches_reference": true
+    },
+    {
+      "input": "input2.txt",
+      "process_count": 5,
+      "exit_code": 0,
+      "waiting_times": {
+        "P00": 21,
+        "P01": 11,
+        "P02": 2,
+        "P03": 4,
+        "P04": 3
+      },
+      "average": "8.20",
+      "matches_reference": true
+    },
+    {
+      "input": "input3.txt",
+      "process_count": 10,
+      "exit_code": 0,
+      "waiting_times": {
+        "P00": 119,
+        "P01": 26,
+        "P02": 67,
+        "P03": 97,
+        "P04": 3,
+        "P05": 4,
+        "P06": 2,
+        "P07": 35,
+        "P08": 77,
+        "P09": 70
+      },
+      "average": "50.00",
+      "matches_reference": true
+    },
+    {
+      "input": "input4.txt",
+      "process_count": 10,
+      "exit_code": 0,
+      "waiting_times": {
+        "P00": 166,
+        "P01": 68,
+        "P02": 182,
+        "P03": 149,
+        "P04": 247,
+        "P05": 238,
+        "P06": 96,
+        "P07": 81,
+        "P08": 51,
+        "P09": 130
+      },
+      "average": "140.80",
+      "matches_reference": true
+    },
+    {
+      "input": "random.txt",
+      "process_count": 15,
+      "exit_code": 0,
+      "waiting_times": {
+        "P00": 0,
+        "P01": 7,
+        "P02": 5,
+        "P03": 1,
+        "P04": 52,
+        "P05": 93,
+        "P06": 152,
+        "P07": 131,
+        "P08": 4,
+        "P09": 93,
+        "P10": 8,
+        "P11": 24,
+        "P12": 79,
+        "P13": 29,
+        "P14": 137
+      },
+      "average": "54.33",
+      "matches_reference": true
+    }
+  ],
+  "error_inputs": [
+    {
+      "input": "error.txt",
+      "exit_code": 1,
+      "normal_output_empty": true,
+      "error": "Error: A burst sequence must start and end with CPU.",
+      "matches_expected": true
+    },
+    {
+      "input": "erroe.txt",
+      "exit_code": 1,
+      "normal_output_empty": true,
+      "error": "Error: Cannot open the input file.",
+      "matches_expected": true
+    }
+  ]
+}

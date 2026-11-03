@@ -1,0 +1,76 @@
+{
+  "screenshots": [
+    {
+      "image": "images/sjf-input1.png",
+      "command": ".\\sjf.exe input1.txt",
+      "evidence": "실행 명령과 표시 결과를 검사 기록과 대조했습니다.",
+      "image_sha256": "445b3b37d146e01aece537d5e5dace74754def522d073d4444e69c048153a10b",
+      "observed_average": "7.20",
+      "displayed_waiting_times_match_reference": true
+    },
+    {
+      "image": "images/sjf-input2.png",
+      "command": ".\\sjf.exe input2.txt",
+      "evidence": "실행 명령과 표시 결과를 검사 기록과 대조했습니다.",
+      "image_sha256": "5f63c37741f39f4bfcb45d10d6db0aa8e78a5b5e390e54e72108e37e979486b1",
+      "observed_average": "8.20",
+      "displayed_waiting_times_match_reference": true
+    },
+    {
+      "image": "images/sjf-input3.png",
+      "command": ".\\sjf.exe input3.txt",
+      "evidence": "실행 명령과 표시 결과를 검사 기록과 대조했습니다.",
+      "image_sha256": "0e5f8a26733e1a1473ce047a15c0f19171ef2cd199ae1b239a1e0356095268e1",
+      "observed_average": "50.00",
+      "displayed_waiting_times_match_reference": true
+    },
+    {
+      "image": "images/sjf-input4.png",
+      "command": ".\\sjf.exe input4.txt",
+      "evidence": "실행 명령과 표시 결과를 검사 기록과 대조했습니다.",
+      "image_sha256": "e7e5303f00e5489a5ec8a7bd633e15156bb6abd8233f620db8345a3c32978d53",
+      "observed_average": "140.80",
+      "displayed_waiting_times_match_reference": true
+    },
+    {
+      "image": "images/sjf-random.png",
+      "command": ".\\sjf.exe random.txt",
+      "evidence": "실행 명령과 표시 결과를 검사 기록과 대조했습니다.",
+      "image_sha256": "37fa90eabbbb978ac0540ff8b4112170d613d1a08ea55cdaf2bff13ff9395ee9",
+      "observed_average": "54.33",
+      "displayed_waiting_times_match_reference": true
+    },
+    {
+      "image": "images/sjf-missing-file.png",
+      "command": ".\\sjf.exe erroe.txt",
+      "evidence": "실행 명령과 표시 결과를 검사 기록과 대조했습니다.",
+      "image_sha256": "98f3daff907e3f8eaabacb7cca3a3faebfbf7cc7c5bee5fa066a73974ecb3e1d",
+      "observed_error": "Error: Cannot open the input file.",
+      "scope": "Missing-file error; this screenshot does not demonstrate malformed contents."
+    },
+    {
+      "image": "images/sjf-format-error.png",
+      "command": ".\\sjf.exe error.txt",
+      "evidence": "실행 명령과 표시 결과를 검사 기록과 대조했습니다.",
+      "image_sha256": "8848abbe02b18891f85985619f37f0d694a7b156fa6666e0ffdcdc1131c5337d",
+      "observed_error": "Error: A burst sequence must start and end with CPU.",
+      "scope": "Malformed burst sequence: the second process ends with I/O and has no final CPU burst."
+    },
+    {
+      "image": "images/sjf-negative-time.png",
+      "command": ".\\sjf.exe error_negative_time.txt",
+      "evidence": "실행 명령과 표시 결과를 검사 기록과 대조했습니다.",
+      "image_sha256": "7a055abe05fd84236921303ec3710b3cce06768db7a1ab3bc8b6ce8ca4b7059b",
+      "observed_error": "Error: Time values must be nonnegative 64-bit integers.",
+      "scope": "Negative CPU duration: CPU:-3."
+    },
+    {
+      "image": "images/sjf-missing-arrival.png",
+      "command": ".\\sjf.exe error_missing_arrival.txt",
+      "evidence": "실행 명령과 표시 결과를 검사 기록과 대조했습니다.",
+      "image_sha256": "df41769c1c524369f49667d72815a9d8f1fca3f17994495b0aafa3770f077ec6",
+      "observed_error": "Error: A process is missing its arrival time.",
+      "scope": "Process name P00 is present but the arrival-time field is missing."
+    }
+  ]
+}
