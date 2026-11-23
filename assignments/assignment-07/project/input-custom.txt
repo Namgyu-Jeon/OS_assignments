@@ -1,0 +1,14 @@
+3 3
+
+Allocation A B C
+P_00 1 0 0
+P_01 0 1 0
+P_02 0 0 1
+
+Max A B C
+P_00 2 1 0
+P_01 0 1 1
+P_02 1 0 1
+
+Available A B C
+1 0 0

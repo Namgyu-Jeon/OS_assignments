@@ -1,0 +1,26 @@
+{
+  "scope": "Two existing console screenshots; no claim of a separate complete manual IDE test.",
+  "screenshots": [
+    {
+      "image": "images/safety-input1.png",
+      "input": "project/input1.txt",
+      "observed_status": "Safe",
+      "observed_sequence": [
+        "P_01",
+        "P_00",
+        "P_02",
+        "P_03",
+        "P_04"
+      ],
+      "image_sha256": "7ce72b4dc114f489bfdc87f8ea29000bc8a05a4848ce5fce30705d523872daaf",
+      "modified": false
+    },
+    {
+      "image": "images/safety-input9.png",
+      "input": "project/input9.txt",
+      "observed_status": "Safe",
+      "image_sha256": "98cf1f9e83b760903abb8d57b08fc585d6cc44bbc078b8e67e52aad7e22f42c7",
+      "modified": false
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "verification_date": "2026-11-23",
+  "configuration": "Release|x64",
+  "build_exit_code": 0,
+  "verification_exit_code": 0,
+  "build_command": "MSBuild safety.sln /m /p:Configuration=Release /p:Platform=x64 /v:minimal /nologo /clp:Summary",
+  "verification_command": "python tests/verify.py bin/x64/Release/safety.exe",
+  "build_log": "release-build.txt",
+  "verification_log": "release-verification.txt",
+  "coverage": {
+    "sample_screens": 9,
+    "additional_safe_example": 1,
+    "boundary_cases": 7,
+    "random_cases": 200,
+    "large_dimensions": {
+      "resource_types": 25,
+      "processes": 120
+    },
+    "format_variants": 4,
+    "invalid_cases": 9
+  },
+  "source_files": {
+    "src/main.cpp": "139e21f27609b2fddcb1b3fdf7449f3fc81b5a91c388280ffb0c739fb16fba25",
+    "src/ResourceFile.cpp": "126ff96598912c590df8c305a9c3969b87d9c739738a266fe880a2f4138125fb",
+    "src/ResourceFile.h": "a2a3113f3c35481ea41992834a8fb60aca3d1a7ebef04651c80176717a0db211",
+    "src/ResourceState.h": "e06a0882ff2e752412b288ebdd2e6c603375d12357135d8e60b73aeecf291185",
+    "src/SafetyAlgorithm.cpp": "9d2356606bdd057be110b703b4a06748748c92bcfe0e201b53fe63d76afad818",
+    "src/SafetyAlgorithm.h": "ea4b32653a07797894be654362ba8b8ddd277901273409b2144f6f725aa408e0",
+    "src/StatePrinter.cpp": "7fa8f48aa7a28cc086fee6b0cd5ff6c8fb47ee09e4bbdc7c2c2456a4cc22e8b1",
+    "src/StatePrinter.h": "5ec03c3c25f4aa8e4a52178e452915f50c9ec6a48dd6c5eacf71e5af90cf6aa1"
+  },
+  "executable_sha256": "88b8a648c9ab043eaf63bd5012c2506d9d174e6ce20b63e5b2c57d1e651dae57",
+  "result": "passed"
+}
