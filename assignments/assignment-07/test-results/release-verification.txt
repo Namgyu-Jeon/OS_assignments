@@ -1,0 +1,7 @@
+PASS: all 9 sample screens, including exact spacing and process order
+PASS: safe sequence shown on PDF page 5
+PASS: 207 boundary/random cases checked against exhaustive search
+PASS: 25 resource types and 120 processes without fixed-size limits
+PASS: Korean/spaced paths, tabs, UTF-8 BOM, CRLF, and blank lines
+PASS: 9 invalid invocation/input cases, including overflow
+All checks passed.

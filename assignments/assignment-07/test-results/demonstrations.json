@@ -1,0 +1,75 @@
+{
+  "configuration": "Release|x64",
+  "runs": [
+    {
+      "input": "project/input1.txt",
+      "output": "test-results/input1.txt",
+      "command": ".\\bin\\x64\\Release\\safety.exe input1.txt",
+      "exit_code": 0,
+      "result": "Result: Safe --> P_01 P_00 P_02 P_03 P_04"
+    },
+    {
+      "input": "project/input2.txt",
+      "output": "test-results/input2.txt",
+      "command": ".\\bin\\x64\\Release\\safety.exe input2.txt",
+      "exit_code": 0,
+      "result": "Result: Safe --> P_00 P_01 P_02 P_03 P_04"
+    },
+    {
+      "input": "project/input3.txt",
+      "output": "test-results/input3.txt",
+      "command": ".\\bin\\x64\\Release\\safety.exe input3.txt",
+      "exit_code": 0,
+      "result": "Result: UnSafe --> P_00 P_01 P_03"
+    },
+    {
+      "input": "project/input4.txt",
+      "output": "test-results/input4.txt",
+      "command": ".\\bin\\x64\\Release\\safety.exe input4.txt",
+      "exit_code": 0,
+      "result": "Result: UnSafe --> P_00 P_01 P_02 P_03 P_04"
+    },
+    {
+      "input": "project/input5.txt",
+      "output": "test-results/input5.txt",
+      "command": ".\\bin\\x64\\Release\\safety.exe input5.txt",
+      "exit_code": 0,
+      "result": "Result: UnSafe --> P_00 P_02"
+    },
+    {
+      "input": "project/input6.txt",
+      "output": "test-results/input6.txt",
+      "command": ".\\bin\\x64\\Release\\safety.exe input6.txt",
+      "exit_code": 0,
+      "result": "Result: Safe --> P_02 P_03 P_00 P_01 P_04 P_05 P_06 P_07 P_08 P_09 P_10 P_11 P_12 P_13 P_14"
+    },
+    {
+      "input": "project/input7.txt",
+      "output": "test-results/input7.txt",
+      "command": ".\\bin\\x64\\Release\\safety.exe input7.txt",
+      "exit_code": 0,
+      "result": "Result: Safe --> P_04 P_01 P_00 P_02 P_03 P_05 P_06 P_07 P_08 P_09 P_10 P_11 P_12 P_13 P_14"
+    },
+    {
+      "input": "project/input8.txt",
+      "output": "test-results/input8.txt",
+      "command": ".\\bin\\x64\\Release\\safety.exe input8.txt",
+      "exit_code": 0,
+      "result": "Result: UnSafe --> P_00 P_01 P_02 P_03 P_04 P_05 P_06 P_07 P_08 P_09 P_10 P_11 P_12 P_13 P_14"
+    },
+    {
+      "input": "project/input9.txt",
+      "output": "test-results/input9.txt",
+      "command": ".\\bin\\x64\\Release\\safety.exe input9.txt",
+      "exit_code": 0,
+      "result": "Result: Safe --> P_03 P_00 P_01 P_02 P_04 P_05 P_06 P_07 P_08 P_09 P_10 P_11 P_12 P_13 P_14"
+    },
+    {
+      "input": "project/input-custom.txt",
+      "output": "test-results/input-custom.txt",
+      "command": ".\\bin\\x64\\Release\\safety.exe input-custom.txt",
+      "exit_code": 0,
+      "result": "Result: Safe --> P_02 P_01 P_00"
+    }
+  ]
+}

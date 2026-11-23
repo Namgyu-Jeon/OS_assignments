@@ -1,0 +1,11 @@
+
+  ResourceFile.cpp
+  main.cpp
+  코드를 생성하고 있습니다...
+  safety.vcxproj -> [project]\bin\x64\Debug\safety.exe
+
+빌드했습니다.
+    경고 0개
+    오류 0개
+
+경과 시간: 00:00:02.47
